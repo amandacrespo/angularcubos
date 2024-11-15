@@ -1,1 +1,16 @@
-<p>cubosmarca works!</p>
+<div class="container my-4">
+    <h1>Cubos de la marca <span class="text-danger">{{ marca }}</span></h1>
+    <hr>
+    <div class="row row-cols-sm-3 row-cols-md-4 justify-content-between">
+        @for (cubo of cubos; track $index) {
+            <div class="card col my-2" style="width: 18rem;">
+                <img [src]="cubo.imagen" width="50px" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ cubo.nombre }}</h5>
+                    <p class="card-text">{{ cubo.precio }}€</p>
+                    <button [routerLink]="['/cubo', cubo.idCubo]" class="btn btn-primary w-100">Detalles</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
