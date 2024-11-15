@@ -1,1 +1,24 @@
-<p>compras works!</p>
+<div class="container m-3">
+    <h1>Tus compras</h1>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Num. pedido</th>
+                <th>Id cubo</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (compra of compras; track $index) {
+                <tr>
+                    <td>{{ compra.idPedido }}</td>
+                    <td>{{ compra.idCubo }}</td>
+                    <td>{{ compra.fechaPedido }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button class="btn btn-primary me-2" routerLink="/perfil">Volver al perfil</button>
+    <button class="btn btn-primary">Realizar pedido</button>
+</div>

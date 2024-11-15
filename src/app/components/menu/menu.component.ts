@@ -22,8 +22,9 @@ export class MenuComponent implements OnInit{
   }
 
   logout():void{
-    environment.token = null;
+    environment.token = '';
     this._router.navigate(['/login']);
+    alert('Sesión cerrada correctamente');
   }
 
 }

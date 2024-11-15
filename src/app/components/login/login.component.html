@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="container my-4">
+    <h1>Iniciar sesión</h1>
+    <hr>
+    <form #form="ngForm" (submit)="login()">
+        <div class="mb-3">
+            <label 
+                for="email" 
+                class="form-label"
+            >Email: </label>
+            <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                #email
+                name="email"
+                value="user1@mail.com"
+            >
+        </div>
+        <div class="mb-3">
+            <label 
+                for="password" 
+                class="form-label"
+            >Contraseña: </label>
+            <input 
+                type="password" 
+                class="form-control" 
+                id="password" 
+                #password
+                name="password"
+                value="12345"
+            >
+        </div>
+        <button class="btn btn-primary w-100">Iniciar sesión</button>
+    </form>
+</div>

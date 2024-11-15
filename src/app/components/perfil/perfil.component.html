@@ -1,1 +1,18 @@
-<p>perfil works!</p>
+<div class="container m-3">
+    <h1>Mi perfil (User 1)</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Email</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ perfil.nombre }}</td>
+                <td>{{ perfil.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary w-100" routerLink="/compras">Mostrar compras</button>
+</div>
