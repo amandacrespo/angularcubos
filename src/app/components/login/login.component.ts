@@ -29,5 +29,9 @@ export class LoginComponent implements OnInit{
             this._router.navigate(['/perfil']);
         } 
     })
+    .catch(error => {
+      console.error(error);
+      alert('No se ha podido iniciar sesion, comprueba los datos');
+    })
   }
 }
