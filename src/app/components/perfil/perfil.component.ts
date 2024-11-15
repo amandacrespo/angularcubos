@@ -18,6 +18,7 @@ export class PerfilComponent implements OnInit{
   ngOnInit(): void {
     if(environment.token === ''){
       this._router.navigate(['/login']);
+      alert('Debes estar registrado para acceder al perfil');
     } else {
       this._service.getPerfil(environment.token)
       .then(res => {

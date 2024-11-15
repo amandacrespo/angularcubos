@@ -18,6 +18,7 @@ export class ComprasComponent implements OnInit{
   ngOnInit(): void {
     if(environment.token == ''){
       this._router.navigate(['/login']);
+      alert('Debes estar registrado para acceder a tus compras');
   } else {
       this._service.getCompras(environment.token)
       .then(res => {

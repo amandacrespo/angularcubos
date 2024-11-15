@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit{
   ngOnInit(): void {
     if(environment.token !== ''){
       this._router.navigate(['/perfil']);
+      alert('Ya estás registrado!');
     }
   }
 
