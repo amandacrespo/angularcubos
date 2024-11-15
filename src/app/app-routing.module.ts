@@ -1,24 +1,37 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { CuboComponent } from './components/cubo/cubo.component';
+import { CubosmarcaComponent } from './components/cubosmarca/cubosmarca.component';
+import { LoginComponent } from './components/login/login.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { ComprasComponent } from './components/compras/compras.component';
 
 const routes: Routes = [
   {
-    path: '/',
+    path: '',
     component: HomeComponent
   },
-  // {
-  //     path: '/cubo/:id',
-  //     component: CuboComponent
-  // },
-  // {
-  //     path: '/cubos/:marca',
-  //     component: CubosMarca
-  // },
-// {
-//     path: '/login',
-//     component: LoginComponent
-// },
+  {
+      path: 'cubo/:id',
+      component: CuboComponent
+  },
+  {
+      path: 'cubos/:marca',
+      component: CubosmarcaComponent
+  },
+  {
+      path: 'login',
+      component: LoginComponent
+  },
+  {
+      path: 'perfil',
+      component: PerfilComponent
+  },
+  {
+      path: 'compras',
+      component: ComprasComponent
+  },
 ];
 
 @NgModule({
